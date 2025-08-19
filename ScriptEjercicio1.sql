@@ -1,12 +1,11 @@
--- create database if not exists norma;
--- use norma;
+create database if not exists norma;
+use norma;
 
 create table personajesDeComic(
  id int not null auto_increment primary key ,
  nombre varchar(50) not null,
  especie varchar(50) not null,
  frase_favorita varchar(150),
- 
 );
 
 insert into personajesdecomic (nombre, especie) values 
@@ -21,4 +20,7 @@ update personajesdecomic set frase_favorita = 'You break the rules and become a 
 
 update personajesdecomic set frase_favorita = 'Jean is only the house where I live' where nombre = 'White Phoenix - Jean Grey';
 
+delete from personajesdecomic where frase_favorita = 'You break the rules and become a hero. I do it, I become the enemy. That doesn’t seem fair.';
+
+delete from personajesdecomic where id between 6 and 10;
 
